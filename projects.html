@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Projects</title>
+  
+  <style>
+     /* General Reset */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background-color: #f5f6fa;
+  color: #333;
+}
+
+/* Header / Navbar */
+.navbar {
+  background-color: #111;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar nav a {
+  color: #fff;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+.navbar nav a:hover {
+  color: #00adb5;
+}
+
+/* Project Grid Layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 3rem;
+}
+
+/* Project Card */
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+}
+
+/* Project Image */
+.project-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay (hidden by default) */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* dark transparent layer */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* Show on hover */
+.project-card:hover .overlay {
+  opacity: 1;
+}
+
+/* Project name text */
+.overlay h3 {
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  letter-spacing: 1px;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+/* Slide text up on hover */
+.project-card:hover .overlay h3 {
+  transform: translateY(0);
+}
+
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #111;
+  color: #fff;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <h1>My Projects</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#web">Web</a>
+      <a href="#apps">Apps</a>
+      <a href="#design">Design</a>
+    </nav>
+  </header>
+
+<section class="projects-grid">
+  <div class="project-card">
+    <img src="images/quizzz.png" alt="Project 1">
+    <div class="overlay">
+      <h3>quiz website</h3>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <img src="images/e-commer.png" alt="Project 2">
+    <div class="overlay">
+      <h3>e-commerce website</h3>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <img src="images/recipe.png" alt="Project 3">
+    <div class="overlay">
+      <h3>Recipe website</h3>
+    </div>
+  </div>
+  <div class="project-card">
+    <img src="images/to-doo.png" alt="Project 4">
+    <div class="overlay">
+      <h3>To-Do Website</h3>
+    </div>
+  </div>
+  <div class="project-card">
+    <img src="images/blog.png" alt="Project 5">
+    <div class="overlay">
+      <h3>Recipe website</h3>
+    </div>
+  </div>
+</section>
+
+
+  <footer>
+    <p>© 2025 Your Name | <a href="index.html">Back to Portfolio</a></p>
+  </footer>
+
+</body>
+</html>
